@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toptier Homes & Properties Ltd - Luxury Real Estate</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/navigation.css">
+
+    <script defer src="./assets/js/navigation.js"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Poppins', 'sans-serif'],
+                },
+                colors: {
+                    primary: '#1e40af', // Darker Blue
+                    secondary: '#fb923c', // Vibrant Orange
+                    dark: '#0f172a', // Rich Black
+                }
+            }
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        [data-aos] { opacity: 0; }
+        .aos-animate { opacity: 1; }
+        
+        .slide-in {
+            animation: slideIn 0.3s ease-out forwards;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans loading">
+    <header id="header" class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="./assets/images/logo.png" alt="" class="w-24">
+            </a>
+            <nav class="space-x-8 hidden md:flex text-slate-600 font-medium items-center">
+                <a href="index.html" class="nav-link text-primary border-b-2 border-secondary pb-1">Home</a>
+                <a href="about.html" class="nav-link hover:text-primary transition duration-300">About</a>
+                <a href="properties.html" class="nav-link hover:text-primary transition duration-300">Properties</a>
+                <a href="services.html" class="nav-link hover:text-primary transition duration-300">Services</a>
+                <a href="contact.html" class="nav-link hover:text-primary transition duration-300">Contact</a>
+            </nav>
+            <a href="contact.html" class="bg-secondary hover:bg-orange-500 text-white font-semibold px-5 py-2.5 rounded-lg transition duration-300 transform hover:scale-105 hidden md:flex items-center gap-2">
+                <span>Get a Quote</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+            </a>
+            <button id="menu-btn" class="md:hidden block text-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="index.html" class="mobile-nav-link block py-3 px-6 text-sm font-medium hover:bg-slate-100 border-l-4 border-secondary text-primary">Home</a>
+            <a href="about.html" class="mobile-nav-link block py-3 px-6 text-sm hover:bg-slate-100">About</a>
+            <a href="properties.html" class="mobile-nav-link block py-3 px-6 text-sm hover:bg-slate-100">Properties</a>
+            <a href="services.html" class="mobile-nav-link block py-3 px-6 text-sm hover:bg-slate-100">Services</a>
+            <a href="contact.html" class="mobile-nav-link block py-3 px-6 text-sm hover:bg-slate-100">Contact</a>
+            <div class="p-4">
+                 <a href="contact.html" class="bg-secondary hover:bg-orange-500 text-white font-semibold w-full py-2.5 rounded-lg transition duration-300 flex items-center justify-center gap-2">
+                    <span>Get a Quote</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="relative bg-cover bg-center h-[95vh] flex items-center" style="background-image: url('./assets/images/hero.png');">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/80 to-transparent"></div>
+            <div class="container mx-auto px-6 text-center text-white relative">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Find Your Perfect Home with Us</h1>
+                <p class="mb-8 text-lg md:text-xl text-slate-200 max-w-3xl mx-auto">Discover exclusive properties and experience unparalleled service with Nigeria's leading real estate partner.</p>
+                
+                <div class="bg-white/90 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-2xl max-w-4xl mx-auto mt-10">
+                    <form class="grid md:grid-cols-4 gap-4 items-center">
+                        <input type="text" placeholder="Enter keyword or location" class="w-full p-4 text-slate-700 border-slate-200 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                        <select class="w-full p-4 text-slate-700 border-slate-200 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                            <option>Property Type</option>
+                            <option>Duplex</option>
+                            <option>Apartment</option>
+                        </select>
+                        <select class="w-full p-4 text-slate-700 border-slate-200 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                            <option>Price Range</option>
+                            <option>₦50M - ₦100M</option>
+                            <option>₦100M - ₦250M</option>
+                        </select>
+                        <button type="submit" class="bg-primary hover:bg-blue-800 text-white font-bold p-4 rounded-lg transition duration-300 w-full h-full">Search</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">Our Core Services</h2>
+                <p class="text-slate-600 mb-16 max-w-2xl mx-auto">We provide a comprehensive range of services to meet all your real estate needs.</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:bg-white transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="bg-secondary/10 inline-block p-4 rounded-full mb-4">
+                            <svg class="h-8 w-8 text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-1.5m-15-13.5H18M15.75 6.75v-1.5a3.375 3.375 0 0 0-3.375-3.375h-1.5a3.375 3.375 0 0 0-3.375 3.375v1.5" /></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2 text-primary">Real Estate Sales</h3>
+                        <p class="text-slate-500">Connecting you with prime properties, ensuring maximum value and long-term investment returns.</p>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:bg-white transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="bg-secondary/10 inline-block p-4 rounded-full mb-4">
+                           <svg class="h-8 w-8 text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" /></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2 text-primary">Property Development</h3>
+                        <p class="text-slate-500">We develop luxury estates and bespoke homes tailored to modern living standards.</p>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:bg-white transition-all duration-300 transform hover:-translate-y-2">
+                         <div class="bg-secondary/10 inline-block p-4 rounded-full mb-4">
+                           <svg class="h-8 w-8 text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" /></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2 text-primary">Investment Advisory</h3>
+                        <p class="text-slate-500">Expert guidance to help you make informed and profitable real estate investment decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">Featured Properties</h2>
+                    <p class="text-slate-600 mb-16 max-w-2xl mx-auto">Explore our handpicked selection of premium properties in the market.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Modern Duplex House" 
+                                 class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500 property-image"
+                                 loading="lazy">
+                            <div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">FEATURED</div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
+                                <h3 class="font-bold text-xl">Luxury 4-Bedroom Duplex</h3>
+                                <p class="text-sm text-slate-200">Lekki Phase 1, Lagos</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="font-extrabold text-3xl text-primary mb-4">₦150,000,000</p>
+                            <div class="flex justify-around items-center text-slate-600 border-t border-b py-3 text-sm">
+                                <span class="flex items-center gap-2"><svg class="h-5 w-5 text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l1.65-1.65m0 0L6 14.25m-1.65-3.6-1.5-1.5M12 2.25 13.65 4.35m0 0 2.1 2.1m-2.1-2.1-1.5 1.5M21.75 12l-1.65 1.65m0 0L18 9.75m1.65 3.6 1.5 1.5M12 21.75l-1.65-2.1m0 0-2.1-2.1m2.1 2.1 1.5-1.5" /></svg> 450 sqm</span>
+                                <span class="flex items-center gap-2"><svg class="h-5 w-5 text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.353-.026.715-.026 1.068 0 1.13.094 1.976 1.057 1.976 2.192v1.392m-.028 11.178H7.62a1.5 1.5 0 0 1-1.5-1.5v-2.25m13.5 0v-2.25a1.5 1.5 0 0 0-1.5-1.5h-9.75a1.5 1.5 0 0 0-1.5 1.5v2.25m13.5 0H19.5" /></svg> 4 Beds</span>
+                                <span class="flex items-center gap-2"><svg class="h-5 w-5 text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a5.25 5.25 0 0 1 5.25 5.25c0 3.391-3.376 7.33-4.82 8.604a.75.75 0 0 1-1.04 0C5.076 19.33 1.5 15.391 1.5 12a5.25 5.25 0 0 1 5.25-5.25Z" /></svg> 5 Baths</span>
+                            </div>
+                            <a href="#" class="mt-6 bg-primary/10 text-primary hover:bg-primary hover:text-white w-full block text-center font-semibold p-3 rounded-lg transition duration-300">View Details</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Modern Apartment Building" 
+                                 class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500 property-image"
+                                 loading="lazy">
+                            <div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">NEW LISTING</div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
+                                <h3 class="font-bold text-xl">Modern Serviced Apartments</h3>
+                                <p class="text-sm text-slate-200">Jabi, Abuja</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="font-extrabold text-3xl text-primary mb-4">₦85,000,000</p>
+                             <div class="flex justify-around items-center text-slate-600 border-t border-b py-3 text-sm">
+                                <span class="flex items-center gap-2"><svg class="h-5 w-5 text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l1.65-1.65m0 0L6 14.25m-1.65-3.6-1.5-1.5M12 2.25 13.65 4.35m0 0 2.1 2.1m-2.1-2.1-1.5 1.5M21.75 12l-1.65 1.65m0 0L18 9.75m1.65 3.6 1.5 1.5M12 21.75l-1.65-2.1m0 0-2.1-2.1m2.1 2.1 1.5-1.5" /></svg> 280 sqm</span>
+                                <span class="flex items-center gap-2"><svg class="h-5 w-5 text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.353-.026.715-.026 1.068 0 1.13.094 1.976 1.057 1.976 2.192v1.392m-.028 11.178H7.62a1.5 1.5 0 0 1-1.5-1.5v-2.25m13.5 0v-2.25a1.5 1.5 0 0 0-1.5-1.5h-9.75a1.5 1.5 0 0 0-1.5 1.5v2.25m13.5 0H19.5" /></svg> 3 Beds</span>
+                                <span class="flex items-center gap-2"><svg class="h-5 w-5 text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a5.25 5.25 0 0 1 5.25 5.25c0 3.391-3.376 7.33-4.82 8.604a.75.75 0 0 1-1.04 0C5.076 19.33 1.5 15.391 1.5 12a5.25 5.25 0 0 1 5.25-5.25Z" /></svg> 3 Baths</span>
+                            </div>
+                            <a href="#" class="mt-6 bg-primary/10 text-primary hover:bg-primary hover:text-white w-full block text-center font-semibold p-3 rounded-lg transition duration-300">View Details</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl">
+                         <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Family Villa" 
+                                 class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500 property-image"
+                                 loading="lazy">
+                            <div class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full">FOR SALE</div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
+                                <h3 class="font-bold text-xl">Exclusive Family Villa</h3>
+                                <p class="text-sm text-slate-200">GRA, Port Harcourt</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="font-extrabold text-3xl text-primary mb-4">₦200,000,000</p>
+                             <div class="flex justify-around items-center text-slate-600 border-t border-b py-3 text-sm">
+                                <span class="flex items-center gap-2"><svg class="h-5 w-5 text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l1.65-1.65m0 0L6 14.25m-1.65-3.6-1.5-1.5M12 2.25 13.65 4.35m0 0 2.1 2.1m-2.1-2.1-1.5 1.5M21.75 12l-1.65 1.65m0 0L18 9.75m1.65 3.6 1.5 1.5M12 21.75l-1.65-2.1m0 0-2.1-2.1m2.1 2.1 1.5-1.5" /></svg> 600 sqm</span>
+                                <span class="flex items-center gap-2"><svg class="h-5 w-5 text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.353-.026.715-.026 1.068 0 1.13.094 1.976 1.057 1.976 2.192v1.392m-.028 11.178H7.62a1.5 1.5 0 0 1-1.5-1.5v-2.25m13.5 0v-2.25a1.5 1.5 0 0 0-1.5-1.5h-9.75a1.5 1.5 0 0 0-1.5 1.5v2.25m13.5 0H19.5" /></svg> 5 Beds</span>
+                                <span class="flex items-center gap-2"><svg class="h-5 w-5 text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a5.25 5.25 0 0 1 5.25 5.25c0 3.391-3.376 7.33-4.82 8.604a.75.75 0 0 1-1.04 0C5.076 19.33 1.5 15.391 1.5 12a5.25 5.25 0 0 1 5.25-5.25Z" /></svg> 6 Baths</span>
+                            </div>
+                            <a href="#" class="mt-6 bg-primary/10 text-primary hover:bg-primary hover:text-white w-full block text-center font-semibold p-3 rounded-lg transition duration-300">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-16">
+                    <a href="properties.html" class="bg-dark hover:bg-slate-700 text-white font-semibold px-8 py-4 rounded-lg transition duration-300">Explore All Properties</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">Loved by Homeowners</h2>
+                    <p class="text-slate-600 mb-16 max-w-2xl mx-auto">Don't just take our word for it. Here's what our happy clients have to say about us.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 p-8 rounded-2xl relative border-l-4 border-secondary">
+                        <svg class="w-16 h-16 text-slate-200 absolute top-6 right-6 -z-10" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352 4C4.456 4 0 8.456 0 13.352c0 4.288 3.472 8.224 8.224 8.224 1.152 0 2.24-.256 3.2-.64.256-1.024.384-2.112.384-3.264 0-3.84-2.688-7.296-6.464-7.296h-1.024V8.32h1.024c1.152 0 1.92-.768 1.92-1.856v-.896c0-1.152-.768-1.536-1.92-1.536H9.352zM22.696 4c-4.896 0-8.224 4.456-8.224 9.352 0 4.288 3.472 8.224 8.224 8.224 1.152 0 2.24-.256 3.2-.64.256-1.024.384-2.112.384-3.264 0-3.84-2.688-7.296-6.464-7.296h-1.024V8.32h1.024c1.152 0 1.92-.768 1.92-1.856v-.896c0-1.152-.768-1.536-1.92-1.536h-.128z" /></svg>
+                        <p class="text-slate-600 italic">“Toptier Homes made the entire process of buying my first home seamless and stress-free. Their professionalism and dedication are second to none!”</p>
+                        <div class="flex items-center mt-6">
+                            <img src="http://googleusercontent.com/image_generation_content/4" class="w-14 h-14 rounded-full shadow-md object-cover" alt="Client Portrait">
+                            <div class="ml-4">
+                                <h4 class="font-bold text-dark">Adekunle Chukwuma</h4>
+                                <p class="text-sm text-slate-500">Homeowner, Lagos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl relative border-l-4 border-secondary">
+                        <svg class="w-16 h-16 text-slate-200 absolute top-6 right-6 -z-10" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352 4C4.456 4 0 8.456 0 13.352c0 4.288 3.472 8.224 8.224 8.224 1.152 0 2.24-.256 3.2-.64.256-1.024.384-2.112.384-3.264 0-3.84-2.688-7.296-6.464-7.296h-1.024V8.32h1.024c1.152 0 1.92-.768 1.92-1.856v-.896c0-1.152-.768-1.536-1.92-1.536H9.352zM22.696 4c-4.896 0-8.224 4.456-8.224 9.352 0 4.288 3.472 8.224 8.224 8.224 1.152 0 2.24-.256 3.2-.64.256-1.024.384-2.112.384-3.264 0-3.84-2.688-7.296-6.464-7.296h-1.024V8.32h1.024c1.152 0 1.92-.768 1.92-1.856v-.896c0-1.152-.768-1.536-1.92-1.536h-.128z" /></svg>
+                        <p class="text-slate-600 italic">“The quality of construction and attention to detail is outstanding. I highly recommend Toptier for any property development project.”</p>
+                        <div class="flex items-center mt-6">
+                            <img src="http://googleusercontent.com/image_generation_content/5" class="w-14 h-14 rounded-full shadow-md object-cover" alt="Client Portrait">
+                            <div class="ml-4">
+                                <h4 class="font-bold text-dark">Amina Bello</h4>
+                                <p class="text-sm text-slate-500">Investor, Abuja</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-2xl relative border-l-4 border-secondary">
+                        <svg class="w-16 h-16 text-slate-200 absolute top-6 right-6 -z-10" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352 4C4.456 4 0 8.456 0 13.352c0 4.288 3.472 8.224 8.224 8.224 1.152 0 2.24-.256 3.2-.64.256-1.024.384-2.112.384-3.264 0-3.84-2.688-7.296-6.464-7.296h-1.024V8.32h1.024c1.152 0 1.92-.768 1.92-1.856v-.896c0-1.152-.768-1.536-1.92-1.536H9.352zM22.696 4c-4.896 0-8.224 4.456-8.224 9.352 0 4.288 3.472 8.224 8.224 8.224 1.152 0 2.24-.256 3.2-.64.256-1.024.384-2.112.384-3.264 0-3.84-2.688-7.296-6.464-7.296h-1.024V8.32h1.024c1.152 0 1.92-.768 1.92-1.856v-.896c0-1.152-.768-1.536-1.92-1.536h-.128z" /></svg>
+                        <p class="text-slate-600 italic">“Excellent service from start to finish. They found us the perfect family home that exceeded all our expectations. Truly a trusted developer.”</p>
+                        <div class="flex items-center mt-6">
+                            <img src="http://googleusercontent.com/image_generation_content/6" class="w-14 h-14 rounded-full shadow-md object-cover" alt="Client Portrait">
+                            <div class="ml-4">
+                                <h4 class="font-bold text-dark">The Johnsons</h4>
+                                <p class="text-sm text-slate-500">Homeowners, Port Harcourt</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-primary">
+            <div class="container mx-auto px-6 py-20 text-center">
+                <h2 class="text-3xl font-extrabold text-white mb-4">Ready to Start Your Real Estate Journey?</h2>
+                <p class="mb-8 max-w-2xl mx-auto text-slate-200">Whether you're buying, selling, or investing, our team is here to provide expert guidance. Let's build your future together.</p>
+                <a href="contact.html" class="bg-secondary hover:bg-orange-500 text-white font-bold px-10 py-4 rounded-lg transition duration-300 transform hover:scale-105 inline-block">Schedule a Free Consultation</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-slate-300">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <a href="index.html" class="text-2xl font-bold text-white">Toptier<span class="font-light text-secondary">Homes</span></a>
+                    <p class="mt-4 text-slate-400 text-sm">Your trusted partner in building dreams. We specialize in luxury properties and premier construction services across Nigeria.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="hover:text-secondary transition-colors">About Us</a></li>
+                        <li><a href="properties.html" class="hover:text-secondary transition-colors">Properties</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">Our Services</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                     <h4 class="font-bold text-lg mb-4 text-white">Contact Info</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start"><span class="mr-2 mt-1 text-secondary">&#9658;</span><span>Presidential Road, New Layout, Enugu, Enugu State</span></li>
+                        <li class="flex items-start"><span class="mr-2 mt-1 text-secondary">&#9658;</span><span>info@toptierhomes.com</span></li>
+                        <li class="flex items-start"><span class="mr-2 mt-1 text-secondary">&#9658;</span><span>+234 806 5241 295</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">Subscribe to Our Newsletter</h4>
+                    <p class="text-sm text-slate-400 mb-4">Get the latest properties and deals directly in your inbox.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your Email" class="w-full p-2 rounded-l-md border-0 text-slate-700 focus:outline-none focus:ring-2 focus:ring-secondary">
+                        <button class="bg-secondary text-white p-2 rounded-r-md hover:bg-orange-500">&rarr;</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black/30 py-4">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center text-sm text-slate-400">
+                <p>&copy; 2025 Toptier Homes & Properties Ltd. All Rights Reserved.</p>
+                 <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-secondary"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
+                    <a href="#" class="hover:text-secondary"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg></a>
+                    <a href="#" class="hover:text-secondary"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.792 2.013 10.146 2 12.315 2zm-1.161 2.25h2.322c2.723 0 2.821.01 3.843.058.996.045 1.504.207 1.857.344.467.182.86.399 1.252.792.39.39.61.785.792 1.252.137.353.3.861.344 1.857.048 1.022.057 1.12.057 3.843s-.01 2.821-.058 3.843c-.045.996-.207 1.504-.344 1.857a3.097 3.097 0 01-.792 1.252 3.097 3.097 0 01-1.252.792c-.353.137-.861.3-1.857.344-1.022.048-1.12.057-3.843.057s-2.821-.01-3.843-.058c-.996-.045-1.504-.207-1.857-.344a3.097 3.097 0 01-1.252-.792 3.097 3.097 0 01-.792-1.252c-.137-.353-.3-.861-.344-1.857-.048-1.022-.057-1.12-.057-3.843s.01-2.821.058-3.843c.045-.996.207-1.504.344-1.857.182-.466.399-.86.792-1.252.39-.39.785-.61 1.252-.792.353-.137.861-.3 1.857-.344C9.51 4.26 9.61 4.25 11.154 4.25zM12 8.25a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zM12 14a2 2 0 110-4 2 2 0 010 4zm6.406-7.125a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd" /></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+    <script>
+        // Remove loading class when page is fully loaded
+        window.addEventListener('load', () => {
+            document.body.classList.remove('loading');
+            
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100,
+            });
+        });
+
+        // Initialize property cards with AOS animations
+        document.querySelectorAll('.property-card').forEach((card, index) => {
+            card.setAttribute('data-aos', 'fade-up');
+            card.setAttribute('data-aos-delay', (index * 100).toString());
+        });
+
+        // Initialize service cards with AOS animations
+        document.querySelectorAll('.service-card').forEach((card, index) => {
+            card.setAttribute('data-aos', 'zoom-in');
+            card.setAttribute('data-aos-delay', (index * 100).toString());
+        });
+
+        // Initialize testimonial cards with AOS animations
+        document.querySelectorAll('.testimonial-card').forEach((card, index) => {
+            card.setAttribute('data-aos', 'fade-right');
+            card.setAttribute('data-aos-delay', (index * 100).toString());
+        });
+    </script>
+</body>
+</html>

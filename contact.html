@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Toptier Homes & Properties Ltd</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/navigation.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <script defer src="./assets/js/navigation.js"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Poppins', 'sans-serif'],
+                },
+                colors: {
+                    primary: '#1e40af', // Darker Blue
+                    secondary: '#fb923c', // Vibrant Orange
+                    dark: '#0f172a', // Rich Black
+                }
+            }
+        }
+    }
+    </script>
+    <style>
+        /* Simple scrollbar styling */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #fb923c; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #f97316; }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <header id="header" class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="./assets/images/logo.png" alt="" class="w-24">
+            </a>
+            
+            <nav class="space-x-8 hidden md:flex text-slate-600 font-medium items-center">
+                <a href="index.html" class="hover:text-primary transition duration-300">Home</a>
+                <a href="about.html" class="hover:text-primary transition duration-300">About</a>
+                <a href="properties.html" class="hover:text-primary transition duration-300">Properties</a>
+                <a href="services.html" class="hover:text-primary transition duration-300">Services</a>
+                <a href="contact.html" class="text-primary border-b-2 border-secondary pb-1">Contact</a>
+            </nav>
+             <a href="contact.html" class="bg-secondary hover:bg-orange-500 text-white font-semibold px-5 py-2.5 rounded-lg transition duration-300 transform hover:scale-105 hidden md:flex items-center gap-2">
+                <span>Get a Quote</span>
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" /></svg>
+            </a>
+            
+            <button id="menu-btn" class="md:hidden block text-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="index.html" class="block py-3 px-6 text-sm hover:bg-slate-100">Home</a>
+            <a href="about.html" class="block py-3 px-6 text-sm hover:bg-slate-100">About</a>
+            <a href="properties.html" class="block py-3 px-6 text-sm hover:bg-slate-100">Properties</a>
+            <a href="contact.html" class="block py-3 px-6 text-sm font-medium hover:bg-slate-100 border-l-4 border-secondary text-primary">Contact</a>
+             <div class="p-4">
+                 <a href="contact.html" class="bg-secondary hover:bg-orange-500 text-white font-semibold w-full py-2.5 rounded-lg transition duration-300 flex items-center justify-center gap-2"><span>Get a Quote</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class=" py-20" style="background-image: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url('./assets/images/contact-hero.png');">
+            <div class="container mx-auto px-6 text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-extrabold">Contact Us</h1>
+                <p class="mt-4 text-lg text-slate-300">We're here to help. Reach out to us with any questions or to start your real estate journey.</p>
+            </div>
+        </section>
+        <section class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <h2 class="text-2xl font-bold text-dark mb-6">Get In Touch</h2>
+                        <p class="text-slate-600 mb-8">Have a question or want to schedule a consultation? Fill out the form or contact us directly through the information below. Our team is ready to assist you.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-secondary/10 text-secondary rounded-full flex items-center justify-center"><i class="fa-solid fa-location-dot text-xl"></i></div>
+                                <div class="ml-4">
+                                    <h3 class="font-bold text-lg text-dark">Our Office</h3>
+                                    <p class="text-slate-500">Presidential Road, New Layout, Enugu, Enugu State</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-secondary/10 text-secondary rounded-full flex items-center justify-center"><i class="fa-solid fa-phone text-xl"></i></div>
+                                <div class="ml-4">
+                                    <h3 class="font-bold text-lg text-dark">Phone</h3>
+                                    <p class="text-slate-500">+234 806 5241 295</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-secondary/10 text-secondary rounded-full flex items-center justify-center"><i class="fa-solid fa-envelope text-xl"></i></div>
+                                <div class="ml-4">
+                                    <h3 class="font-bold text-lg text-dark">Email</h3>
+                                    <p class="text-slate-500">info@toptierhomes.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-secondary/10 text-secondary rounded-full flex items-center justify-center"><i class="fa-solid fa-clock text-xl"></i></div>
+                                <div class="ml-4">
+                                    <h3 class="font-bold text-lg text-dark">Business Hours</h3>
+                                    <p class="text-slate-500">Monday - Friday: 9:00 AM to 5:00 PM</p>
+                                    <p class="text-slate-500">Saturday: By Appointment Only</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                         <h2 class="text-2xl font-bold text-dark mb-6">Send Us a Message</h2>
+                         <form action="#" method="POST" class="space-y-6">
+                            <div>
+                                <label for="name" class="font-medium text-slate-700">Full Name</label>
+                                <input type="text" id="name" name="name" required class="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition">
+                            </div>
+                             <div>
+                                <label for="email" class="font-medium text-slate-700">Email Address</label>
+                                <input type="email" id="email" name="email" required class="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition">
+                            </div>
+                             <div>
+                                <label for="subject" class="font-medium text-slate-700">Subject</label>
+                                <input type="text" id="subject" name="subject" required class="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition">
+                            </div>
+                            <div>
+                                <label for="message" class="font-medium text-slate-700">Message</label>
+                                <textarea id="message" name="message" rows="5" required class="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary transition"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-800 transition-colors duration-300 transform hover:scale-105">
+                                Send Message
+                            </button>
+                         </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">Frequently Asked Questions</h2>
+                    <p class="text-slate-600 mb-12 max-w-2xl mx-auto">Find quick answers to common questions about our services and processes.</p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <div class="border rounded-lg p-4">
+                        <h3 class="font-semibold text-lg text-dark cursor-pointer">What types of properties do you specialize in?</h3>
+                        <p class="text-slate-600 mt-2">We specialize in luxury residential properties, including duplexes, villas, serviced apartments, and exclusive gated estates. We also handle high-end commercial property development.</p>
+                    </div>
+                    <div class="border rounded-lg p-4">
+                        <h3 class="font-semibold text-lg text-dark cursor-pointer">Do you offer property financing options?</h3>
+                        <p class="text-slate-600 mt-2">While we do not directly provide financing, we have strong partnerships with leading financial institutions and can guide you through the mortgage application process to secure the best rates.</p>
+                    </div>
+                    <div class="border rounded-lg p-4">
+                        <h3 class="font-semibold text-lg text-dark cursor-pointer">What is the process for buying a property?</h3>
+                        <p class="text-slate-600 mt-2">Our process begins with a consultation to understand your needs, followed by property viewing, due diligence, offer negotiation, and finally, the legal transfer of ownership. We guide you every step of the way.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.4633391214!2d3.14386701831885!3d6.548035252814889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1725237307049!5m2!1sen!2sng" 
+                width="100%" 
+                height="500" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </main>
+
+<footer class="bg-dark text-slate-300">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <a href="index.html" class="text-2xl font-bold text-white">Toptier<span class="font-light text-secondary">Homes</span></a>
+                    <p class="mt-4 text-slate-400 text-sm">Your trusted partner in building dreams. We specialize in luxury properties and premier construction services across Nigeria.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="hover:text-secondary transition-colors">About Us</a></li>
+                        <li><a href="properties.html" class="hover:text-secondary transition-colors">Properties</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">Our Services</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                     <h4 class="font-bold text-lg mb-4 text-white">Contact Info</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start"><span class="mr-2 mt-1 text-secondary">&#9658;</span><span>Presidential Road, New Layout, Enugu, Enugu State</span></li>
+                        <li class="flex items-start"><span class="mr-2 mt-1 text-secondary">&#9658;</span><span>info@toptierhomes.com</span></li>
+                        <li class="flex items-start"><span class="mr-2 mt-1 text-secondary">&#9658;</span><span>+234 806 5241 295</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">Subscribe to Our Newsletter</h4>
+                    <p class="text-sm text-slate-400 mb-4">Get the latest properties and deals directly in your inbox.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your Email" class="w-full p-2 rounded-l-md border-0 text-slate-700 focus:outline-none focus:ring-2 focus:ring-secondary">
+                        <button class="bg-secondary text-white p-2 rounded-r-md hover:bg-orange-500">&rarr;</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black/30 py-4">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center text-sm text-slate-400">
+                <p>&copy; 2025 Toptier Homes & Properties Ltd. All Rights Reserved.</p>
+                 <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-secondary"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
+                    <a href="#" class="hover:text-secondary"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg></a>
+                    <a href="#" class="hover:text-secondary"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.792 2.013 10.146 2 12.315 2zm-1.161 2.25h2.322c2.723 0 2.821.01 3.843.058.996.045 1.504.207 1.857.344.467.182.86.399 1.252.792.39.39.61.785.792 1.252.137.353.3.861.344 1.857.048 1.022.057 1.12.057 3.843s-.01 2.821-.058 3.843c-.045.996-.207 1.504-.344 1.857a3.097 3.097 0 01-.792 1.252 3.097 3.097 0 01-1.252.792c-.353.137-.861.3-1.857.344-1.022.048-1.12.057-3.843.057s-2.821-.01-3.843-.058c-.996-.045-1.504-.207-1.857-.344a3.097 3.097 0 01-1.252-.792 3.097 3.097 0 01-.792-1.252c-.137-.353-.3-.861-.344-1.857-.048-1.022-.057-1.12-.057-3.843s.01-2.821.058-3.843c.045-.996.207-1.504.344-1.857.182-.466.399-.86.792-1.252.39-.39.785-.61 1.252-.792.353-.137.861-.3 1.857-.344C9.51 4.26 9.61 4.25 11.154 4.25zM12 8.25a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zM12 14a2 2 0 110-4 2 2 0 010 4zm6.406-7.125a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd" /></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // --- MOBILE MENU SCRIPT ---
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const header = document.getElementById('header');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>

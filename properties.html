@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Properties - Toptier Homes & Properties Ltd</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/navigation.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script defer src="./assets/js/navigation.js"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Poppins', 'sans-serif'],
+                },
+                colors: {
+                    primary: '#1e40af', // Darker Blue
+                    secondary: '#fb923c', // Vibrant Orange
+                    dark: '#0f172a', // Rich Black
+                }
+            }
+        }
+    }
+    </script>
+    <style>
+        /* Simple scrollbar styling */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #fb923c; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #f97316; }
+    </style>
+</head>
+
+<body class="bg-slate-100 text-slate-800 font-sans">
+
+    <header id="header" class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="./assets/images/logo.png" alt="" class="w-24">
+            </a>
+            
+            <nav class="space-x-8 hidden md:flex text-slate-600 font-medium items-center">
+                <a href="index.html" class="hover:text-primary transition duration-300">Home</a>
+                <a href="about.html" class="hover:text-primary transition duration-300">About</a>
+                <a href="properties.html" class="text-primary border-b-2 border-secondary pb-1">Properties</a>
+                <a href="services.html" class="hover:text-primary transition duration-300">Services</a>
+                <a href="contact.html" class="hover:text-primary transition duration-300">Contact</a>
+            </nav>
+             <a href="contact.html" class="bg-secondary hover:bg-orange-500 text-white font-semibold px-5 py-2.5 rounded-lg transition duration-300 transform hover:scale-105 hidden md:flex items-center gap-2">
+                <span>Get a Quote</span>
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" /></svg>
+            </a>
+            
+            <button id="menu-btn" class="md:hidden block text-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-primary"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="index.html" class="block py-3 px-6 text-sm hover:bg-slate-100">Home</a>
+            <a href="about.html" class="block py-3 px-6 text-sm hover:bg-slate-100">About</a>
+            <a href="properties.html" class="block py-3 px-6 text-sm font-medium hover:bg-slate-100 border-l-4 border-secondary text-primary">Properties</a>
+            <a href="contact.html" class="block py-3 px-6 text-sm hover:bg-slate-100">Contact</a>
+             <div class="p-4">
+                 <a href="contact.html" class="bg-secondary hover:bg-orange-500 text-white font-semibold w-full py-2.5 rounded-lg transition duration-300 flex items-center justify-center gap-2"><span>Get a Quote</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-cover bg-center py-24" style="background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://source.unsplash.com/1600x900/?real,estate,aerial');">
+            <div class="container mx-auto px-6 text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-extrabold">Explore Our Exclusive Properties</h1>
+                <p class="mt-4 text-lg text-slate-300">Find the perfect home that fits your lifestyle from our curated listings.</p>
+            </div>
+        </section>
+
+        <section class="bg-white sticky top-[72px] z-40 shadow-md">
+            <div class="container mx-auto p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <input type="text" placeholder="Keyword (e.g. Duplex, Lekki)" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                    <select class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary text-slate-500">
+                        <option>Location</option>
+                        <option>Lagos</option>
+                        <option>Abuja</option>
+                        <option>Port Harcourt</option>
+                    </select>
+                    <select class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary text-slate-500">
+                        <option>Property Type</option>
+                        <option>Duplex</option>
+                        <option>Apartment</option>
+                        <option>Villa</option>
+                        <option>Bungalow</option>
+                    </select>
+                    <select class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary text-slate-500">
+                        <option>Beds</option>
+                        <option>1+</option>
+                        <option>2+</option>
+                        <option>3+</option>
+                        <option>4+</option>
+                    </select>
+                    <button class="bg-primary text-white font-bold p-3 rounded-lg hover:bg-blue-800 transition-colors w-full h-full">
+                        Search Properties
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-slate-50 py-4 border-b border-slate-200">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-600 font-medium mb-2 md:mb-0">Showing <span class="text-dark font-bold">1-6</span> of <span class="text-dark font-bold">12</span> results</p>
+                <div class="flex items-center">
+                    <label for="sort" class="text-sm mr-2">Sort by:</label>
+                    <select id="sort" class="p-2 border rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-secondary">
+                        <option>Newest</option>
+                        <option>Price (Low to High)</option>
+                        <option>Price (High to Low)</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div id="property-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="property-card bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="relative"><img src="./assets/images/p1.png" alt="Property" class="w-full h-64 object-cover"><div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">FOR SALE</div></div>
+                        <div class="p-6"><h3 class="font-bold text-xl text-dark mb-1">Luxury 4-Bed Duplex</h3><p class="text-slate-500 text-sm mb-4">Lekki Phase 1, Lagos</p><p class="font-extrabold text-2xl text-primary mb-4">₦150,000,000</p><div class="flex justify-around items-center text-slate-600 border-t py-3 text-sm"><span>450 sqm</span><span>4 Beds</span><span>5 Baths</span></div></div>
+                    </div>
+                    <div class="property-card bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="relative"><img src="./assets/images/p2.png" alt="Property" class="w-full h-64 object-cover"><div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">FOR SALE</div></div>
+                        <div class="p-6"><h3 class="font-bold text-xl text-dark mb-1">Serviced 3-Bed Apartment</h3><p class="text-slate-500 text-sm mb-4">Jabi, Abuja</p><p class="font-extrabold text-2xl text-primary mb-4">₦85,000,000</p><div class="flex justify-around items-center text-slate-600 border-t py-3 text-sm"><span>280 sqm</span><span>3 Beds</span><span>3 Baths</span></div></div>
+                    </div>
+                    <div class="property-card bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="relative"><img src="./assets/images/p3.png" alt="Property" class="w-full h-64 object-cover"><div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">FOR SALE</div></div>
+                        <div class="p-6"><h3 class="font-bold text-xl text-dark mb-1">Exclusive Family Villa</h3><p class="text-slate-500 text-sm mb-4">GRA, Port Harcourt</p><p class="font-extrabold text-2xl text-primary mb-4">₦220,000,000</p><div class="flex justify-around items-center text-slate-600 border-t py-3 text-sm"><span>600 sqm</span><span>5 Beds</span><span>6 Baths</span></div></div>
+                    </div>
+                    <div class="property-card bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="relative"><img src="./assets/images/p4.png" alt="Property" class="w-full h-64 object-cover"><div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">FOR SALE</div></div>
+                        <div class="p-6"><h3 class="font-bold text-xl text-dark mb-1">Modern 2-Bed Bungalow</h3><p class="text-slate-500 text-sm mb-4">Ikeja, Lagos</p><p class="font-extrabold text-2xl text-primary mb-4">₦75,000,000</p><div class="flex justify-around items-center text-slate-600 border-t py-3 text-sm"><span>350 sqm</span><span>2 Beds</span><span>3 Baths</span></div></div>
+                    </div>
+                    <div class="property-card bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="relative"><img src="./assets/images/p5.png" alt="Property" class="w-full h-64 object-cover"><div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">FOR SALE</div></div>
+                        <div class="p-6"><h3 class="font-bold text-xl text-dark mb-1">Rooftop Penthouse</h3><p class="text-slate-500 text-sm mb-4">Wuse II, Abuja</p><p class="font-extrabold text-2xl text-primary mb-4">₦300,000,000</p><div class="flex justify-around items-center text-slate-600 border-t py-3 text-sm"><span>550 sqm</span><span>4 Beds</span><span>5 Baths</span></div></div>
+                    </div>
+                    <div class="property-card bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="relative"><img src="./assets/images/p6.png" alt="Property" class="w-full h-64 object-cover"><div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">FOR SALE</div></div>
+                        <div class="p-6"><h3 class="font-bold text-xl text-dark mb-1">Charming Family Home</h3><p class="text-slate-500 text-sm mb-4">Trans Amadi, Port Harcourt</p><p class="font-extrabold text-2xl text-primary mb-4">₦110,000,000</p><div class="flex justify-around items-center text-slate-600 border-t py-3 text-sm"><span>480 sqm</span><span>4 Beds</span><span>4 Baths</span></div></div>
+                    </div>
+                    <div class="property-card bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="relative"><img src="./assets/images/p7.png" alt="Property" class="w-full h-64 object-cover"><div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">FOR SALE</div></div>
+                        <div class="p-6"><h3 class="font-bold text-xl text-dark mb-1">Beachfront Getaway</h3><p class="text-slate-500 text-sm mb-4">Eko Atlantic, Lagos</p><p class="font-extrabold text-2xl text-primary mb-4">₦450,000,000</p><div class="flex justify-around items-center text-slate-600 border-t py-3 text-sm"><span>700 sqm</span><span>6 Beds</span><span>7 Baths</span></div></div>
+                    </div>
+                    <div class="property-card bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="relative"><img src="./assets/images/p8.png" alt="Property" class="w-full h-64 object-cover"><div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">FOR SALE</div></div>
+                        <div class="p-6"><h3 class="font-bold text-xl text-dark mb-1">Urban Loft Apartment</h3><p class="text-slate-500 text-sm mb-4">Maitama, Abuja</p><p class="font-extrabold text-2xl text-primary mb-4">₦95,000,000</p><div class="flex justify-around items-center text-slate-600 border-t py-3 text-sm"><span>250 sqm</span><span>2 Beds</span><span>2 Baths</span></div></div>
+                    </div>
+                    <div class="property-card bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="relative"><img src="./assets/images/p9.png" alt="Property" class="w-full h-64 object-cover"><div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">FOR SALE</div></div>
+                        <div class="p-6"><h3 class="font-bold text-xl text-dark mb-1">Countryside Estate</h3><p class="text-slate-500 text-sm mb-4">Ibeju-Lekki, Lagos</p><p class="font-extrabold text-2xl text-primary mb-4">₦180,000,000</p><div class="flex justify-around items-center text-slate-600 border-t py-3 text-sm"><span>800 sqm</span><span>5 Beds</span><span>5 Baths</span></div></div>
+                    </div>
+                    <div class="property-card bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="relative"><img src="./assets/images/p10.png" alt="Property" class="w-full h-64 object-cover"><div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">FOR SALE</div></div>
+                        <div class="p-6"><h3 class="font-bold text-xl text-dark mb-1">4-Bed Terrace House</h3><p class="text-slate-500 text-sm mb-4">Gwarinpa, Abuja</p><p class="font-extrabold text-2xl text-primary mb-4">₦120,000,000</p><div class="flex justify-around items-center text-slate-600 border-t py-3 text-sm"><span>400 sqm</span><span>4 Beds</span><span>5 Baths</span></div></div>
+                    </div>
+                    <div class="property-card bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="relative"><img src="./assets/images/p11.png" alt="Property" class="w-full h-64 object-cover"><div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">FOR SALE</div></div>
+                        <div class="p-6"><h3 class="font-bold text-xl text-dark mb-1">Luxury Condominium</h3><p class="text-slate-500 text-sm mb-4">Ikoyi, Lagos</p><p class="font-extrabold text-2xl text-primary mb-4">₦250,000,000</p><div class="flex justify-around items-center text-slate-600 border-t py-3 text-sm"><span>320 sqm</span><span>3 Beds</span><span>4 Baths</span></div></div>
+                    </div>
+                     <div class="property-card bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="relative"><img src="./assets/images/p12.png" alt="Property" class="w-full h-64 object-cover"><div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">FOR SALE</div></div>
+                        <div class="p-6"><h3 class="font-bold text-xl text-dark mb-1">Grand Mansion</h3><p class="text-slate-500 text-sm mb-4">Banana Island, Lagos</p><p class="font-extrabold text-2xl text-primary mb-4">₦950,000,000</p><div class="flex justify-around items-center text-slate-600 border-t py-3 text-sm"><span>1200 sqm</span><span>7 Beds</span><span>9 Baths</span></div></div>
+                    </div>
+                     <div class="property-card bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="relative"><img src="./assets/images/p12.png" alt="Property" class="w-full h-64 object-cover"><div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">FOR SALE</div></div>
+                        <div class="p-6"><h3 class="font-bold text-xl text-dark mb-1">Grand Mansion</h3><p class="text-slate-500 text-sm mb-4">Banana Island, Lagos</p><p class="font-extrabold text-2xl text-primary mb-4">₦950,000,000</p><div class="flex justify-around items-center text-slate-600 border-t py-3 text-sm"><span>1200 sqm</span><span>7 Beds</span><span>9 Baths</span></div></div>
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center mt-16">
+                    <nav id="pagination" class="flex items-center space-x-2">
+                        </nav>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<footer class="bg-dark text-slate-300">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <a href="index.html" class="text-2xl font-bold text-white">Toptier<span class="font-light text-secondary">Homes</span></a>
+                    <p class="mt-4 text-slate-400 text-sm">Your trusted partner in building dreams. We specialize in luxury properties and premier construction services across Nigeria.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="hover:text-secondary transition-colors">About Us</a></li>
+                        <li><a href="properties.html" class="hover:text-secondary transition-colors">Properties</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors">Our Services</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                     <h4 class="font-bold text-lg mb-4 text-white">Contact Info</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start"><span class="mr-2 mt-1 text-secondary">&#9658;</span><span>Presidential Road, New Layout, Enugu, Enugu State</span></li>
+                        <li class="flex items-start"><span class="mr-2 mt-1 text-secondary">&#9658;</span><span>info@toptierhomes.com</span></li>
+                        <li class="flex items-start"><span class="mr-2 mt-1 text-secondary">&#9658;</span><span>+234 806 5241 295</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">Subscribe to Our Newsletter</h4>
+                    <p class="text-sm text-slate-400 mb-4">Get the latest properties and deals directly in your inbox.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your Email" class="w-full p-2 rounded-l-md border-0 text-slate-700 focus:outline-none focus:ring-2 focus:ring-secondary">
+                        <button class="bg-secondary text-white p-2 rounded-r-md hover:bg-orange-500">&rarr;</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black/30 py-4">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center text-sm text-slate-400">
+                <p>&copy; 2025 Toptier Homes & Properties Ltd. All Rights Reserved.</p>
+                 <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-secondary"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
+                    <a href="#" class="hover:text-secondary"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg></a>
+                    <a href="#" class="hover:text-secondary"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.792 2.013 10.146 2 12.315 2zm-1.161 2.25h2.322c2.723 0 2.821.01 3.843.058.996.045 1.504.207 1.857.344.467.182.86.399 1.252.792.39.39.61.785.792 1.252.137.353.3.861.344 1.857.048 1.022.057 1.12.057 3.843s-.01 2.821-.058 3.843c-.045.996-.207 1.504-.344 1.857a3.097 3.097 0 01-.792 1.252 3.097 3.097 0 01-1.252.792c-.353.137-.861.3-1.857.344-1.022.048-1.12.057-3.843.057s-2.821-.01-3.843-.058c-.996-.045-1.504-.207-1.857-.344a3.097 3.097 0 01-1.252-.792 3.097 3.097 0 01-.792-1.252c-.137-.353-.3-.861-.344-1.857-.048-1.022-.057-1.12-.057-3.843s.01-2.821.058-3.843c.045-.996.207-1.504.344-1.857.182-.466.399-.86.792-1.252.39-.39.785-.61 1.252-.792.353-.137.861-.3 1.857-.344C9.51 4.26 9.61 4.25 11.154 4.25zM12 8.25a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zM12 14a2 2 0 110-4 2 2 0 010 4zm6.406-7.125a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd" /></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // --- MOBILE MENU SCRIPT ---
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const header = document.getElementById('header');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+        
+        // --- PAGINATION SCRIPT ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const propertiesPerPage = 6;
+            const propertyCards = Array.from(document.querySelectorAll('.property-card'));
+            const paginationContainer = document.getElementById('pagination');
+            const totalProperties = propertyCards.length;
+            const totalPages = Math.ceil(totalProperties / propertiesPerPage);
+            let currentPage = 1;
+
+            function showPage(page) {
+                const startIndex = (page - 1) * propertiesPerPage;
+                const endIndex = startIndex + propertiesPerPage;
+                
+                // Hide all cards first
+                propertyCards.forEach(card => card.style.display = 'none');
+                
+                // Show cards for the current page
+                propertyCards.slice(startIndex, endIndex).forEach(card => card.style.display = 'block');
+                
+                // Update pagination buttons
+                updatePaginationButtons();
+            }
+
+            function updatePaginationButtons() {
+                paginationContainer.innerHTML = ''; // Clear existing buttons
+
+                // Previous Button
+                const prevButton = document.createElement('button');
+                prevButton.textContent = '« Prev';
+                prevButton.className = 'px-4 py-2 bg-white border rounded-lg hover:bg-slate-200 text-slate-500 text-sm disabled:opacity-50 disabled:cursor-not-allowed';
+                if (currentPage === 1) prevButton.disabled = true;
+                prevButton.addEventListener('click', () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        showPage(currentPage);
+                    }
+                });
+                paginationContainer.appendChild(prevButton);
+
+                // Page Number Buttons
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageButton = document.createElement('button');
+                    pageButton.textContent = i;
+                    pageButton.className = `px-4 py-2 border rounded-lg text-sm ${currentPage === i ? 'bg-primary text-white font-semibold' : 'bg-white hover:bg-slate-200'}`;
+                    pageButton.addEventListener('click', () => {
+                        currentPage = i;
+                        showPage(currentPage);
+                    });
+                    paginationContainer.appendChild(pageButton);
+                }
+
+                // Next Button
+                const nextButton = document.createElement('button');
+                nextButton.textContent = 'Next »';
+                nextButton.className = 'px-4 py-2 bg-white border rounded-lg hover:bg-slate-200 text-sm disabled:opacity-50 disabled:cursor-not-allowed';
+                if (currentPage === totalPages) nextButton.disabled = true;
+                nextButton.addEventListener('click', () => {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        showPage(currentPage);
+                    }
+                });
+                paginationContainer.appendChild(nextButton);
+            }
+
+            // Initial load
+            showPage(currentPage);
+        });
+    </script>
+</body>
+</html>

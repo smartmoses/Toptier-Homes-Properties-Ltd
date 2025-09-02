@@ -1,0 +1,59 @@
+/* Navigation Styles */
+#mobile-menu {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+#mobile-menu:not(.hidden) {
+    max-height: 400px; /* Adjust based on content */
+    opacity: 1;
+}
+
+/* Smooth header transition */
+#header {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Navigation link hover effects */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fb923c;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Mobile menu item hover effect */
+.mobile-nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #fb923c;
+    opacity: 0.1;
+    transition: width 0.3s ease;
+}
+
+.mobile-nav-link:hover::before {
+    width: 100%;
+}
