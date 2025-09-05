@@ -46,6 +46,47 @@
             from { transform: translateY(-100%); }
             to { transform: translateY(0); }
         }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-scale-in {
+            animation: scaleIn 0.5s ease-out forwards;
+        }
+
+        .animate-fade-up {
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .hero-search {
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+            animation-delay: 0.5s;
+        }
     </style>
 </head>
 
@@ -56,14 +97,14 @@
                 <img src="./assets/images/logo.png" alt="" class="w-24">
             </a>
             <nav class="space-x-8 hidden md:flex text-slate-600 font-medium items-center">
-                <a href="index.html" class="nav-link text-primary border-b-2 border-secondary pb-1">Home</a>
-                <a href="about.html" class="nav-link hover:text-primary transition duration-300">About</a>
-                <a href="properties.html" class="nav-link hover:text-primary transition duration-300">Properties</a>
-                <a href="services.html" class="nav-link hover:text-primary transition duration-300">Services</a>
-                <a href="contact.html" class="nav-link hover:text-primary transition duration-300">Contact</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="properties.html" class="nav-link">Properties</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </nav>
             <a href="contact.html" class="bg-secondary hover:bg-orange-500 text-white font-semibold px-5 py-2.5 rounded-lg transition duration-300 transform hover:scale-105 hidden md:flex items-center gap-2">
-                <span>Get a Quote</span>
+                <span>Get in Touch</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                 </svg>
@@ -75,14 +116,14 @@
             </button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <a href="index.html" class="mobile-nav-link block py-3 px-6 text-sm font-medium hover:bg-slate-100 border-l-4 border-secondary text-primary">Home</a>
-            <a href="about.html" class="mobile-nav-link block py-3 px-6 text-sm hover:bg-slate-100">About</a>
-            <a href="properties.html" class="mobile-nav-link block py-3 px-6 text-sm hover:bg-slate-100">Properties</a>
-            <a href="services.html" class="mobile-nav-link block py-3 px-6 text-sm hover:bg-slate-100">Services</a>
-            <a href="contact.html" class="mobile-nav-link block py-3 px-6 text-sm hover:bg-slate-100">Contact</a>
+            <a href="index.html" class="mobile-nav-link block py-3 px-6 text-sm">Home</a>
+            <a href="about.html" class="mobile-nav-link block py-3 px-6 text-sm">About</a>
+            <a href="properties.html" class="mobile-nav-link block py-3 px-6 text-sm">Properties</a>
+            <a href="services.html" class="mobile-nav-link block py-3 px-6 text-sm">Services</a>
+            <a href="contact.html" class="mobile-nav-link block py-3 px-6 text-sm">Contact</a>
             <div class="p-4">
                  <a href="contact.html" class="bg-secondary hover:bg-orange-500 text-white font-semibold w-full py-2.5 rounded-lg transition duration-300 flex items-center justify-center gap-2">
-                    <span>Get a Quote</span>
+                    <span>Get in Touch</span>
                 </a>
             </div>
         </div>
@@ -90,13 +131,23 @@
 
     <main>
 
-        <section class="relative bg-cover bg-center h-[95vh] flex items-center" style="background-image: url('./assets/images/hero.png');">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/80 to-transparent"></div>
+        <section class="relative bg-cover bg-center h-[95vh] flex items-center overflow-hidden" style="background-image: url('./assets/images/hero.png');">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/80 to-transparent" data-aos="fade" data-aos-duration="1500"></div>
             <div class="container mx-auto px-6 text-center text-white relative">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Find Your Perfect Home with Us</h1>
-                <p class="mb-8 text-lg md:text-xl text-slate-200 max-w-3xl mx-auto">Discover exclusive properties and experience unparalleled service with Nigeria's leading real estate partner.</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4" 
+                    data-aos="fade-down" 
+                    data-aos-duration="1000"
+                    data-aos-delay="300">
+                    Find Your Perfect Home with Us
+                </h1>
+                <p class="mb-8 text-lg md:text-xl text-slate-200 max-w-3xl mx-auto"
+                   data-aos="fade-up" 
+                   data-aos-duration="1000"
+                   data-aos-delay="500">
+                    Discover exclusive properties and experience unparalleled service with Nigeria's leading real estate partner.
+                </p>
                 
-                <div class="bg-white/90 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-2xl max-w-4xl mx-auto mt-10">
+                <div class="bg-white/90 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-2xl max-w-4xl mx-auto mt-10 hero-search">
                     <form class="grid md:grid-cols-4 gap-4 items-center">
                         <input type="text" placeholder="Enter keyword or location" class="w-full p-4 text-slate-700 border-slate-200 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
                         <select class="w-full p-4 text-slate-700 border-slate-200 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
@@ -115,11 +166,19 @@
             </div>
         </section>
 
-        <section class="py-24 bg-white">
+        <section class="py-24 bg-white overflow-hidden">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">Our Core Services</h2>
-                <p class="text-slate-600 mb-16 max-w-2xl mx-auto">We provide a comprehensive range of services to meet all your real estate needs.</p>
-                <div class="grid md:grid-cols-3 gap-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark"
+                    data-aos="fade-down"
+                    data-aos-duration="800">Our Core Services</h2>
+                <p class="text-slate-600 mb-16 max-w-2xl mx-auto"
+                   data-aos="fade-up"
+                   data-aos-duration="800"
+                   data-aos-delay="200">We provide a comprehensive range of services to meet all your real estate needs.</p>
+                <div class="grid md:grid-cols-3 gap-8"
+                     data-aos="fade-up"
+                     data-aos-duration="1200"
+                     data-aos-delay="400">
                     <div class="bg-slate-50 p-8 rounded-2xl shadow-sm hover:shadow-xl hover:bg-white transition-all duration-300 transform hover:-translate-y-2">
                         <div class="bg-secondary/10 inline-block p-4 rounded-full mb-4">
                             <svg class="h-8 w-8 text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-1.5m-15-13.5H18M15.75 6.75v-1.5a3.375 3.375 0 0 0-3.375-3.375h-1.5a3.375 3.375 0 0 0-3.375 3.375v1.5" /></svg>
@@ -145,13 +204,21 @@
             </div>
         </section>
 
-        <section class="py-24 bg-slate-100">
+        <section class="py-24 bg-slate-100 overflow-hidden">
             <div class="container mx-auto px-6">
                 <div class="text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">Featured Properties</h2>
-                    <p class="text-slate-600 mb-16 max-w-2xl mx-auto">Explore our handpicked selection of premium properties in the market.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark"
+                        data-aos="fade-down"
+                        data-aos-duration="800">Featured Properties</h2>
+                    <p class="text-slate-600 mb-16 max-w-2xl mx-auto"
+                       data-aos="fade-up"
+                       data-aos-duration="800"
+                       data-aos-delay="200">Explore our handpicked selection of premium properties in the market.</p>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                     data-aos="fade-up"
+                     data-aos-duration="1000"
+                     data-aos-delay="400">
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl">
                         <div class="relative">
                             <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" 
@@ -225,13 +292,21 @@
             </div>
         </section>
 
-        <section class="py-24 bg-white">
+        <section class="py-24 bg-white overflow-hidden">
             <div class="container mx-auto px-6">
                 <div class="text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">Loved by Homeowners</h2>
-                    <p class="text-slate-600 mb-16 max-w-2xl mx-auto">Don't just take our word for it. Here's what our happy clients have to say about us.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark"
+                        data-aos="fade-down"
+                        data-aos-duration="800">Loved by Homeowners</h2>
+                    <p class="text-slate-600 mb-16 max-w-2xl mx-auto"
+                       data-aos="fade-up"
+                       data-aos-duration="800"
+                       data-aos-delay="200">Don't just take our word for it. Here's what our happy clients have to say about us.</p>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                     data-aos="fade-up"
+                     data-aos-duration="1000"
+                     data-aos-delay="400">
                     <div class="bg-slate-50 p-8 rounded-2xl relative border-l-4 border-secondary">
                         <svg class="w-16 h-16 text-slate-200 absolute top-6 right-6 -z-10" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352 4C4.456 4 0 8.456 0 13.352c0 4.288 3.472 8.224 8.224 8.224 1.152 0 2.24-.256 3.2-.64.256-1.024.384-2.112.384-3.264 0-3.84-2.688-7.296-6.464-7.296h-1.024V8.32h1.024c1.152 0 1.92-.768 1.92-1.856v-.896c0-1.152-.768-1.536-1.92-1.536H9.352zM22.696 4c-4.896 0-8.224 4.456-8.224 9.352 0 4.288 3.472 8.224 8.224 8.224 1.152 0 2.24-.256 3.2-.64.256-1.024.384-2.112.384-3.264 0-3.84-2.688-7.296-6.464-7.296h-1.024V8.32h1.024c1.152 0 1.92-.768 1.92-1.856v-.896c0-1.152-.768-1.536-1.92-1.536h-.128z" /></svg>
                         <p class="text-slate-600 italic">“Toptier Homes made the entire process of buying my first home seamless and stress-free. Their professionalism and dedication are second to none!”</p>
@@ -269,11 +344,20 @@
             </div>
         </section>
 
-        <section class="bg-primary">
+        <section class="bg-primary overflow-hidden">
             <div class="container mx-auto px-6 py-20 text-center">
-                <h2 class="text-3xl font-extrabold text-white mb-4">Ready to Start Your Real Estate Journey?</h2>
-                <p class="mb-8 max-w-2xl mx-auto text-slate-200">Whether you're buying, selling, or investing, our team is here to provide expert guidance. Let's build your future together.</p>
-                <a href="contact.html" class="bg-secondary hover:bg-orange-500 text-white font-bold px-10 py-4 rounded-lg transition duration-300 transform hover:scale-105 inline-block">Schedule a Free Consultation</a>
+                <h2 class="text-3xl font-extrabold text-white mb-4"
+                    data-aos="fade-down"
+                    data-aos-duration="800">Ready to Start Your Real Estate Journey?</h2>
+                <p class="mb-8 max-w-2xl mx-auto text-slate-200"
+                   data-aos="fade-up"
+                   data-aos-duration="800"
+                   data-aos-delay="200">Whether you're buying, selling, or investing, our team is here to provide expert guidance. Let's build your future together.</p>
+                <a href="contact.html" 
+                   class="bg-secondary hover:bg-orange-500 text-white font-bold px-10 py-4 rounded-lg transition duration-300 transform hover:scale-105 inline-block animate-float"
+                   data-aos="zoom-in"
+                   data-aos-duration="800"
+                   data-aos-delay="400">Schedule a Free Consultation</a>
             </div>
         </section>
 
@@ -331,30 +415,62 @@
         window.addEventListener('load', () => {
             document.body.classList.remove('loading');
             
-            // Initialize AOS
+            // Initialize AOS with enhanced settings
             AOS.init({
-                duration: 800,
-                once: true,
-                offset: 100,
+                duration: 1000,
+                easing: 'ease-out-cubic',
+                once: false,
+                mirror: true,
+                offset: 50,
+                delay: 100,
+                anchorPlacement: 'top-bottom'
             });
         });
 
-        // Initialize property cards with AOS animations
+        // Enhanced animations for property cards
         document.querySelectorAll('.property-card').forEach((card, index) => {
             card.setAttribute('data-aos', 'fade-up');
+            card.setAttribute('data-aos-duration', '800');
             card.setAttribute('data-aos-delay', (index * 100).toString());
+            
+            // Add hover animation
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px) scale(1.02)';
+                card.style.transition = 'all 0.3s ease-out';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
         });
 
-        // Initialize service cards with AOS animations
-        document.querySelectorAll('.service-card').forEach((card, index) => {
-            card.setAttribute('data-aos', 'zoom-in');
-            card.setAttribute('data-aos-delay', (index * 100).toString());
+        // Enhanced animations for service cards
+        document.querySelectorAll('.bg-slate-50').forEach((card, index) => {
+            card.setAttribute('data-aos', 'fade-up');
+            card.setAttribute('data-aos-duration', '800');
+            card.setAttribute('data-aos-delay', (index * 150).toString());
         });
 
-        // Initialize testimonial cards with AOS animations
+        // Enhanced animations for testimonial cards
         document.querySelectorAll('.testimonial-card').forEach((card, index) => {
-            card.setAttribute('data-aos', 'fade-right');
-            card.setAttribute('data-aos-delay', (index * 100).toString());
+            card.setAttribute('data-aos', 'fade-left');
+            card.setAttribute('data-aos-duration', '1000');
+            card.setAttribute('data-aos-delay', (index * 200).toString());
+        });
+
+        // Add floating animation to CTA buttons
+        document.querySelectorAll('.animate-float').forEach(button => {
+            button.style.animation = 'float 3s ease-in-out infinite';
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 </body>

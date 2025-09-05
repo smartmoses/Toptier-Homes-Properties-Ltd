@@ -16,9 +16,11 @@
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Navigation link hover effects */
+/* Desktop Navigation link effects */
 .nav-link {
     position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
 }
 
 .nav-link::after {
@@ -26,20 +28,37 @@
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -2px;
-    left: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #fb923c;
     transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #1e40af;
 }
 
 .nav-link:hover::after {
     width: 100%;
 }
 
-/* Mobile menu item hover effect */
+/* Active nav link state */
+.nav-link.active {
+    color: #1e40af;
+    font-weight: 600;
+}
+
+.nav-link.active::after {
+    width: 100%;
+    background-color: #fb923c;
+}
+
+/* Mobile menu item effects */
 .mobile-nav-link {
     position: relative;
     transition: all 0.3s ease;
+    border-left: 4px solid transparent;
 }
 
 .mobile-nav-link::before {
@@ -54,6 +73,20 @@
     transition: width 0.3s ease;
 }
 
+.mobile-nav-link:hover {
+    background-color: #f8fafc;
+    border-left-color: #fb923c;
+    color: #1e40af;
+}
+
 .mobile-nav-link:hover::before {
     width: 100%;
+}
+
+/* Active mobile link state */
+.mobile-nav-link.active {
+    background-color: #f1f5f9;
+    border-left-color: #fb923c;
+    color: #1e40af;
+    font-weight: 600;
 }
